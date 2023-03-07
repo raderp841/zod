@@ -7,6 +7,7 @@ import {FC} from "react";
 import BasicForm from "./pages/BasicForm";
 import BasicFormWithUseHook from "./pages/BasicFormWithUseHook";
 import BasicFormWithUseHookAndZod from "./pages/BasicFormWithUseHookAndZod";
+import Home from "./pages/Home";
 import MuiFormWithUseHookAndZod from "./pages/MuiFormWithUseHookAndZod";
 
 // interface
@@ -24,7 +25,7 @@ export const routes: Array<Route> = [
         title: 'Home',
         path: '/',
         enabled: true,
-        component: BasicForm
+        component: Home
     },
     {
         key: 'basic-form-route',

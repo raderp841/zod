@@ -1,12 +1,29 @@
 import './basic-form-html.css'
 
 function BasicFormHtml() {
+
+    interface Inputy {
+        name:string,
+        value:string
+    }
+
+    const handleSubmit = (e: any) => {
+        e.preventDefault();
+        Array.from(e.target.elements).forEach((el:any) => {
+            const obj: Inputy = {
+                name : el.name,
+                value : el.value
+            }
+            console.log(obj);
+        });
+    }
+
     return (
         <>
             <h3>Basic Form</h3>
 
             <div>
-                <form action="/action_page.php">
+                <form onSubmit={handleSubmit}>
                     <label>First Name</label>
                     <input type="text" id="fname" name="firstname" placeholder="Your name.." />
 

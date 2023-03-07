@@ -1,0 +1,60 @@
+.slide-effect {
+    position: relative;
+    
+    width: 100%;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text, .slideDown, .slideUp {
+    position: relative;
+    font-family: tahoma;
+    font-size: 35px;
+    opacity:0;
+  }
+  
+  .text {
+    top:40px;
+    font-weight: bold;
+    animation: slideUp ease .4s forwards;
+  }
+  
+  .slideDown {
+    top:-40px;
+    left:5px;
+    animation: slideDown ease .4s forwards .6s;
+  }
+  
+  .slideUp {
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    top:40px;
+    left:10px;
+  }
+
+  .firstSlide {
+    animation: slideUp ease .5s forwards 1.2s;
+  }
+
+  .secondSlide {
+    font-size: 80px;
+    animation: slideUp ease .5s forwards 2.2s;
+  }
+
+  .thirdSlide {
+    font-size: 80px;
+    font-weight: 900;
+    animation: slideUp ease .5s forwards 3.2s;
+  }
+
+  @keyframes slideUp {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(-40px);opacity:1;}
+  }
+  
+  @keyframes slideDown {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(40px);opacity:1;}
+  }

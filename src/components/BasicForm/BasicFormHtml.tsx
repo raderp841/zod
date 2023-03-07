@@ -14,7 +14,8 @@ function BasicFormHtml() {
                 name : el.name,
                 value : el.value
             }
-            console.log(obj);
+
+            if(obj.value === '') alert(`${obj.name} cant be empty`);
         });
     }
 
